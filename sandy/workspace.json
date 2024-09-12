@@ -1,0 +1,196 @@
+{
+  "name": "exchange-sandbox",
+  "services": [
+    {
+      "serviceName": "RendererService",
+      "path": "https://capsulajs.s3.amazonaws.com/PR/feature-set-CI-CD/capsulahub-service-renderer/index.js",
+      "definition": {
+        "serviceName": "RendererService",
+        "methods": {
+          "renderLayouts": {
+            "asyncModel": "requestResponse"
+          },
+          "renderItems": {
+            "asyncModel": "requestResponse"
+          },
+          "renderItem": {
+            "asyncModel": "requestResponse"
+          }
+        }
+      },
+      "config": {}
+    },
+    {
+      "serviceName": "EnvironmentSelectorService",
+      "path": "https://capsulajs.s3.amazonaws.com/master/capsulahub-service-selector/index.js",
+      "definition": {
+        "serviceName": "EnvironmentSelectorService",
+        "methods": {
+          "setItems": {
+            "asyncModel": "requestResponse"
+          },
+          "items$": {
+            "asyncModel": "requestStream"
+          },
+          "selectItem": {
+            "asyncModel": "requestResponse"
+          },
+          "selectedItem$": {
+            "asyncModel": "requestStream"
+          }
+        }
+      },
+      "config": {
+        "serviceName": "EnvironmentSelectorService"
+      }
+    },
+    {
+      "serviceName": "MethodSelectorService",
+      "path": "https://capsulajs.s3.amazonaws.com/master/capsulahub-service-selector/index.js",
+      "definition": {
+        "serviceName": "MethodSelectorService",
+        "methods": {
+          "setItems": {
+            "asyncModel": "requestResponse"
+          },
+          "items$": {
+            "asyncModel": "requestStream"
+          },
+          "selectItem": {
+            "asyncModel": "requestResponse"
+          },
+          "selectedItem$": {
+            "asyncModel": "requestStream"
+          }
+        }
+      },
+      "config": {
+        "serviceName": "MethodSelectorService"
+      }
+    },
+    {
+      "serviceName": "EnvironmentRegistryService",
+      "path": "https://sandbox.exberry.io/exchange-sandbox-application-environment-registry/index.js",
+      "definition": {
+        "serviceName": "EnvironmentRegistryService",
+        "methods": {
+          "register": {
+            "asyncModel": "requestResponse"
+          },
+          "delete": {
+            "asyncModel": "requestResponse"
+          },
+          "environments$": {
+            "asyncModel": "requestStream"
+          }
+        }
+      },
+      "config": {
+        "token": "https://raw.githubusercontent.com/jivygroup/api-sandbox-data/master/sandy",
+        "configProvider": "httpFile"
+      }
+    },
+    {
+      "serviceName": "ApplicationFlowService",
+      "path": "https://sandbox.exberry.io/exchange-sandbox-application-flow/index.js",
+      "definition": {
+        "serviceName": "ApplicationFlowService",
+        "methods": {}
+      },
+      "config": {
+        "favicon": "https://gosandy.io/wp-content/uploads/2020/07/sandy_neg-18-02.png",
+        "logo": "https://gosandy.io/wp-content/uploads/2020/05/logo-new-dark-1-e1590494818512.png",
+        "logoRedirect": "https://gosandy.io/",
+        "pageTitle":"Sandy. Websocket Sandbox",
+        "enableEdit": true,
+        "isProduction": true
+      }
+    },
+    {
+      "serviceName": "WebSocketConnectionService",
+      "path": "https://capsulajs.s3.amazonaws.com/master/capsulahub-service-connection/index.js",
+      "definition": {
+        "serviceName": "WebSocketConnectionService",
+        "methods": {
+          "open": {
+            "asyncModel": "requestResponse"
+          },
+          "close": {
+            "asyncModel": "requestResponse"
+          },
+          "send": {
+            "asyncModel": "requestResponse"
+          },
+          "events$": {
+            "asyncModel": "requestStream"
+          }
+        }
+      },
+      "config": {
+        "provider": "websocket",
+        "serviceName": "WebSocketConnectionService"
+      }
+    },
+    {
+      "serviceName": "RSocketConnectionService",
+      "path": "https://capsulajs.s3.amazonaws.com/master/capsulahub-service-connection/index.js",
+      "definition": {
+        "serviceName": "RSocketConnectionService",
+        "methods": {
+          "open": {
+            "asyncModel": "requestResponse"
+          },
+          "close": {
+            "asyncModel": "requestResponse"
+          },
+          "send": {
+            "asyncModel": "requestResponse"
+          },
+          "events$": {
+            "asyncModel": "requestStream"
+          }
+        }
+      },
+      "config": {
+        "provider": "rsocket",
+        "serviceName": "RSocketConnectionService"
+      }
+    },
+    {
+      "serviceName": "AuthService",
+      "path": "https://capsulajs.s3.amazonaws.com/master/capsulahub-service-auth/index.js",
+      "definition": {
+        "serviceName": "AuthService",
+        "methods": {
+          "init": {
+            "asyncModel": "requestResponse"
+          },
+          "login": {
+            "asyncModel": "requestResponse"
+          },
+          "logout": {
+            "asyncModel": "requestResponse"
+          },
+          "authStatus$": {
+            "asyncModel": "requestStream"
+          }
+        }
+      },
+      "config": {
+        "domain": "sandbox-exchange-om2-com.eu.auth0.com",
+        "clientId": "S03UBxxKhuCSp1PI2dRA3NTtP6NQiOBu",
+        "serviceName": "AuthService"
+      }
+    }
+  ],
+  "components": {
+    "layouts": {
+      "capsulahub-root": {
+        "componentName": "web-exchange-sandbox",
+        "path": "https://sandbox.exberry.io/exchange-sandbox-application-widget/index.js",
+        "config": {}
+      }
+    },
+    "items": {}
+  }
+}

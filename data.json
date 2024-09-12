@@ -1,0 +1,15 @@
+{
+      "renderer":"global",
+      "name":"edge",
+      "nodes":[
+        {"renderer":"region","name":"INTERNET","nodes":[],"connections":[],"class":"normal"},
+        {"renderer":"region","name":"us-east-1","maxVolume":50000,"updated":1531737637907,"nodes":[
+          {"renderer":"focusedChild","name":"INTERNET","nodes":[],"connections":[],"class":"normal"},
+          {"renderer":"focusedChild","name":"api-gateway","nodes":[],"connections":[],"class":"normal"}
+        ],"connections":[
+          {"source":"INTERNET","target":"api-gateway","metrics":{"danger":11.1,"normal":150.23},"class":"normal"}
+        ],"class":"normal"}],
+      "connections":[
+        {"source":"INTERNET","target":"us-east-1","class":"normal"}
+      ]
+    }

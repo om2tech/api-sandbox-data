@@ -1,0 +1,195 @@
+{
+  "text": "<span class='brand-name icon node-icon'><span style='padding-right: 0px' class='text-white text-bold'>ORG</span><span class='text-blue text-bold'>Service</span></span>",
+  "id": "1",
+  "type": "ORG",
+  "backColor": "black",
+  "nodes": [{
+    "id": "2",
+    "text": "createOrganization",
+    "backColor": "black",
+    "data": {
+      "q": "/organizations/createOrganization",
+      "sid": 1,
+      "d": {
+        "token": {
+          "token": "AUTH-0-TOKEN"
+        },
+        "name": "ORGANIZATION-NAME",
+        "email": "ORGANIZATION@email.com"
+      }
+    }
+
+  }, {
+    "id": "3",
+    "text": "getOrganization",
+    "backColor": "black",
+    "data": {
+      "q": "/organizations/getOrganization",
+      "sid": 1,
+      "d": {
+        "token": {
+          "token": "AUTH-0-TOKEN"
+        },
+        "organizationId": "ORG-ID"
+
+      }
+    }
+  }, {
+    "id": "4",
+    "text": "UpdateOrganization",
+    "backColor": "black",
+    "data": {
+      "q": "/organizations/updateOrganization",
+      "sid": 1,
+      "d": {
+        "token": {
+          "token": "AUTH-0-TOKEN"
+        },
+        "organizationId": "ORG-ID",
+        "name": "NEW-ORGANIZATION-NAME",
+        "email": "NEW-ORGANIZATION@email.com"
+      }
+    }
+  }, {
+    "id": "5",
+    "text": "deleteOrganization",
+    "backColor": "black",
+    "data": {
+      "q": "/organizations/deleteOrganization",
+      "sid": 1,
+      "d": {
+        "token": {
+          "token": "AUTH-0-TOKEN"
+        },
+        "organizationId": "ORG-ID"
+
+      }
+    }
+
+  }, {
+    "id": "6",
+    "text": "InviteMember",
+    "backColor": "black",
+    "data": {
+      "q": "/organizations/inviteMember",
+      "sid": 1,
+      "d": {
+        "token": {
+          "token": "AUTH-0-TOKEN"
+        },
+        "organizationId": "ORG-ID",
+        "userId": "[Auth0 generated Client ID]@clients",
+        "role":"Owner/Admin/Member(PERMISSION LEVEL FOR ORGANIZATION MEMBERS)"
+      }
+    }
+  }, {
+    "id": "7",
+    "text": "kickoutMember",
+    "backColor": "black",
+    "data": {
+      "q": "/organizations/kickoutMember",
+      "sid": 1,
+      "d": {
+        "token": {
+          "token": "AUTH-0-TOKEN"
+        },
+        "organizationId": "ORG-ID",
+        "userId": "[Auth0 generated Client ID]@clients"
+      }
+    }
+  }, {
+    "id": "8",
+    "text": "leaveOrganization",
+    "backColor": "black",
+    "data": {
+      "q": "/organizations/leaveOrganization",
+      "sid": 1,
+      "d": {
+        "token": {
+          "token": "AUTH-0-TOKEN"
+        },
+        "organizationId": "ORG-ID"
+
+      }
+    }
+  }, {
+    "id": "9",
+    "text": "UpdateMemberRole",
+    "backColor": "black",
+    "data": {
+      "q": "/organizations/updateMemberRole",
+      "sid": 1,
+      "d": {
+        "token": {
+          "token": "AUTH-0-TOKEN"
+        },
+        "organizationId": "ORG-ID",
+        "userId": "[Auth0 generated Client ID]@clients",
+        "role": "Owner/Admin/Member (PERMISSION LEVEL FOR ORGANIZATION MEMBERS)"
+      }
+    }
+  }, {
+    "id": "10",
+    "text": "getOrganizationMembers",
+    "backColor": "black",
+    "data": {
+      "q": "/organizations/getOrganizationMembers",
+      "sid": 1,
+      "d": {
+        "token": {
+          "token": "AUTH-0-TOKEN"
+        },
+        "organizationId": "ORG-ID"
+
+      }
+    }
+  }, {
+    "id": "11",
+    "text": "getMyOrganizations",
+    "backColor": "black",
+    "data": {
+      "q": "/organizations/getMyOrganizations",
+      "sid": 1,
+      "d": {
+        "token": {
+          "token": "AUTH-0-TOKEN"
+        }
+      }
+    }
+  },  {
+    "id": "12",
+    "text": "addApiKey",
+    "backColor": "black",
+    "data": {
+      "q": "/organizations/addApiKey",
+      "sid": 1,
+      "d": {
+        "token": {
+          "token": "AUTH-0-TOKEN"
+        },
+        "organizationId": "ORG-ID",
+        "apiKeyName": "NAME-FOR-API-KEY",
+        "claims": {
+          "role": "Owner/Admin/Member (PERMISSION LEVEL FOR API KEY TO CONFIGURATION SERVICE)"
+        }
+      }
+    }
+  }, {
+    "id": "13",
+    "text": "deleteApiKey",
+    "backColor": "black",
+    "data": {
+      "q": "/organizations/deleteApiKey",
+      "sid": 1,
+      "d": {
+        "token": {
+          "token": "AUTH-0-TOKEN"
+        },
+        "organizationId": "ORG-ID",
+        "apiKeyName": "NAME-OF-RELEVANT-API-KEY"
+      }
+    }
+
+  }]
+
+}

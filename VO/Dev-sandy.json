@@ -1,0 +1,533 @@
+{
+	"dev-new-env-2": {
+		"url": "wss://webserverdevelop.om2.com",
+		"provider": "websocket",
+		"order": 6,
+		"methods": [
+			{
+				"group": "PositionsStream",
+				"methodName": "PositionsStream-bo1",
+				"payload": {
+					"sample": {
+						"type": "subscribe",
+						"stream": "positions",
+						"sid": 3,
+						"apiKey": "9f399cfd-1870-4da9-9d79-2e0cca70cb4e",
+						"timestamp": "2023-08-24T13:05:47.627Z",
+						"signature": "d07a850dbac01b7857d2f83bc6382185870b03d8fa47d4878ff2bde92bc4f5ec",
+						"payLoad": {
+							"somekey": "somevalue"
+						}
+					}
+				}
+			},
+			{
+				"group": "PositionsStream",
+				"methodName": "PositionsStream-bo2",
+				"payload": {
+					"sample": {
+						"type": "subscribe",
+						"stream": "positions",
+						"sid": 3,
+						"apiKey": "1116a012-5aa2-4570-a8f9-f36a17451573",
+						"timestamp": "2023-11-01T12:43:54.495Z",
+						"signature": "9679a21a25620c1d0325e0f17f52faa11bf66146cfa17a4ebd40590e84bf4180",
+						"payLoad": {
+							"somekey": "somevalue"
+						}
+					}
+				}
+			},
+			{
+				"group": "PositionsStream",
+				"methodName": "PositionsStream-devtest",
+				"payload": {
+					"sample": {
+						"type": "subscribe",
+						"stream": "positions",
+						"sid": 3,
+						"apiKey": "a56d3ea3-6aec-49a8-92de-c1f9e8f47765",
+						"timestamp": "2023-08-24T13:15:03.691Z",
+						"signature": "969575c9f55cf2bcc2f1a4ab19d730068ba94f0f1cd6e941ab4556c9efd771e2",
+						"payLoad": {
+							"somekey": "somevalue"
+						}
+					}
+				}
+			},
+			{
+				"group": "InstrumentsStream",
+				"methodName": "InstrumentsStream-bo1",
+				"payload": {
+					"sample": {
+						"type": "subscribe",
+						"stream": "marketData/instruments",
+						"sid": 3,
+						"apiKey": "9f399cfd-1870-4da9-9d79-2e0cca70cb4e",
+						"timestamp": "2023-08-24T13:05:47.627Z",
+						"signature": "d07a850dbac01b7857d2f83bc6382185870b03d8fa47d4878ff2bde92bc4f5ec",
+						"payLoad": {
+							"somekey": "somevalue"
+						}
+					}
+				}
+			},
+			{
+				"group": "InstrumentsStream",
+				"methodName": "InstrumentsStream-bo2",
+				"payload": {
+					"sample": {
+						"type": "subscribe",
+						"stream": "marketData/instruments",
+						"sid": 3,
+						"apiKey": "1116a012-5aa2-4570-a8f9-f36a17451573",
+						"timestamp": "2023-11-01T12:43:54.495Z",
+						"signature": "9679a21a25620c1d0325e0f17f52faa11bf66146cfa17a4ebd40590e84bf4180",
+						"payLoad": {
+							"somekey": "somevalue"
+						}
+					}
+				}
+			},
+			{
+				"group": "InstrumentsStream",
+				"methodName": "InstrumentsStream-devtest",
+				"payload": {
+					"sample": {
+						"type": "subscribe",
+						"stream": "marketData/instruments",
+						"sid": 3,
+						"apiKey": "a56d3ea3-6aec-49a8-92de-c1f9e8f47765",
+						"timestamp": "2023-08-24T13:15:03.691Z",
+						"signature": "969575c9f55cf2bcc2f1a4ab19d730068ba94f0f1cd6e941ab4556c9efd771e2",
+						"payLoad": {
+							"somekey": "somevalue"
+						}
+					}
+				}
+			},
+			{
+				"group": "underlyingAssetsstream",
+				"methodName": "underlyingAssets-bo1",
+				"payload": {
+					"sample": {
+						"type": "subscribe",
+						"stream": "marketData/underlyingAssets",
+						"sid": 3,
+						"apiKey": "9f399cfd-1870-4da9-9d79-2e0cca70cb4e",
+						"timestamp": "2023-08-24T13:05:47.627Z",
+						"signature": "d07a850dbac01b7857d2f83bc6382185870b03d8fa47d4878ff2bde92bc4f5ec",
+						"payLoad": {
+							"somekey": "somevalue"
+						}
+					}
+				}
+			},
+			{
+				"group": "underlyingAssetsstream",
+				"methodName": "underlyingAssets-bo2",
+				"payload": {
+					"sample": {
+						"type": "subscribe",
+						"stream": "marketData/underlyingAssets",
+						"sid": 3,
+						"apiKey": "1116a012-5aa2-4570-a8f9-f36a17451573",
+						"timestamp": "2023-11-01T12:43:54.495Z",
+						"signature": "9679a21a25620c1d0325e0f17f52faa11bf66146cfa17a4ebd40590e84bf4180",
+						"payLoad": {
+							"somekey": "somevalue"
+						}
+					}
+				}
+			},
+			{
+				"group": "underlyingAssetsstream",
+				"methodName": "underlyingAssets-devtest",
+				"payload": {
+					"sample": {
+						"type": "subscribe",
+						"stream": "marketData/underlyingAssets",
+						"sid": 3,
+						"apiKey": "a56d3ea3-6aec-49a8-92de-c1f9e8f47765",
+						"timestamp": "2023-08-24T13:15:03.691Z",
+						"signature": "969575c9f55cf2bcc2f1a4ab19d730068ba94f0f1cd6e941ab4556c9efd771e2",
+						"payLoad": {
+							"somekey": "somevalue"
+						}
+					}
+				}
+			}
+		]
+	},
+	"[custom]-new-env-1": {
+		"url": "wss://webserverdemo.om2.com",
+		"provider": "websocket",
+		"order": 62,
+		"methods": [
+			{
+				"group": "PositionsStream",
+				"methodName": "PositionsStream-Bot1",
+				"payload": {
+					"sample": {
+						"type": "subscribe",
+						"stream": "positions",
+						"sid": 3,
+						"apiKey": "14e8aa21-c87f-4689-a623-7e424b7fec20",
+						"timestamp": "2023-08-23T11:28:38.919Z",
+						"signature": "9ad5b0b36c4d9970370091e11f935ee318209c9dc0534a4cba4aa4a7fb37ab9e",
+						"payLoad": {
+							"somekey": "somevalue"
+						}
+					}
+				}
+			},
+			{
+				"group": "PositionsStream",
+				"methodName": "PositionsStream-Bot2",
+				"payload": {
+					"sample": {
+						"type": "subscribe",
+						"stream": "positions",
+						"sid": 3,
+						"apiKey": "30286a4c-0494-4280-bc96-4fb2a3368288",
+						"timestamp": "2023-08-23T11:32:14.414Z",
+						"signature": "042f84877588eeb0e5432ad23983ca4147c417468cbcc067d79fd72151fe67b7",
+						"payLoad": {
+							"somekey": "somevalue"
+						}
+					}
+				}
+			},
+			{
+				"group": "PositionsStream",
+				"methodName": "PositionsStream-Trader1",
+				"payload": {
+					"sample": {
+						"type": "subscribe",
+						"stream": "positions",
+						"sid": 3,
+						"apiKey": "2b89f1ba-b79f-474d-9d53-4a04014e6f71",
+						"timestamp": "2023-08-23T11:33:21.781Z",
+						"signature": "8183c3c1edc4bb01fdfa56506c5d6285236fcd53276f7f10bfddb1cc64de0253",
+						"payLoad": {
+							"somekey": "somevalue"
+						}
+					}
+				}
+			},
+			{
+				"group": "PositionsStream",
+				"methodName": "PositionsStream-Trader2",
+				"payload": {
+					"sample": {
+						"type": "subscribe",
+						"stream": "positions",
+						"sid": 3,
+						"apiKey": "3a61bc85-c233-4dde-ae8a-315111bbe17d",
+						"timestamp": "2023-08-23T11:33:57.517Z",
+						"signature": "02be5f6e003b3fe05849cc51efd413386106add6a778d0a468be7b8a4def32cf",
+						"payLoad": {
+							"somekey": "somevalue"
+						}
+					}
+				}
+			},
+			{
+				"group": "InstrumentsStream",
+				"methodName": "InstrumentsStream-Bot1",
+				"payload": {
+					"sample": {
+						"type": "subscribe",
+						"stream": "marketData/instruments",
+						"sid": 3,
+						"apiKey": "14e8aa21-c87f-4689-a623-7e424b7fec20",
+						"timestamp": "2023-08-23T11:28:38.919Z",
+						"signature": "9ad5b0b36c4d9970370091e11f935ee318209c9dc0534a4cba4aa4a7fb37ab9e",
+						"payLoad": {
+							"somekey": "somevalue"
+						}
+					}
+				}
+			},
+			{
+				"group": "InstrumentsStream",
+				"methodName": "InstrumentsStream-Bot2",
+				"payload": {
+					"sample": {
+						"type": "subscribe",
+						"stream": "marketData/instruments",
+						"sid": 3,
+						"apiKey": "30286a4c-0494-4280-bc96-4fb2a3368288",
+						"timestamp": "2023-08-23T11:32:14.414Z",
+						"signature": "042f84877588eeb0e5432ad23983ca4147c417468cbcc067d79fd72151fe67b7",
+						"payLoad": {
+							"somekey": "somevalue"
+						}
+					}
+				}
+			},
+			{
+				"group": "InstrumentsStream",
+				"methodName": "InstrumentsStream-Trader1",
+				"payload": {
+					"sample": {
+						"type": "subscribe",
+						"stream": "marketData/instruments",
+						"sid": 3,
+						"apiKey": "2b89f1ba-b79f-474d-9d53-4a04014e6f71",
+						"timestamp": "2023-08-23T11:33:21.781Z",
+						"signature": "8183c3c1edc4bb01fdfa56506c5d6285236fcd53276f7f10bfddb1cc64de0253",
+						"payLoad": {
+							"somekey": "somevalue"
+						}
+					}
+				}
+			},
+			{
+				"group": "InstrumentsStream",
+				"methodName": "InstrumentsStream-Trader2",
+				"payload": {
+					"sample": {
+						"type": "subscribe",
+						"stream": "marketData/instruments",
+						"sid": 3,
+						"apiKey": "3a61bc85-c233-4dde-ae8a-315111bbe17d",
+						"timestamp": "2023-08-23T11:33:57.517Z",
+						"signature": "02be5f6e003b3fe05849cc51efd413386106add6a778d0a468be7b8a4def32cf",
+						"payLoad": {
+							"somekey": "somevalue"
+						}
+					}
+				}
+			},
+			{
+				"group": "underlyingAssetsstream",
+				"methodName": "underlyingAssets-bot1",
+				"payload": {
+					"sample": {
+						"type": "subscribe",
+						"stream": "marketData/underlyingAssets",
+						"sid": 3,
+						"apiKey": "14e8aa21-c87f-4689-a623-7e424b7fec20",
+						"timestamp": "2023-08-23T11:28:38.919Z",
+						"signature": "9ad5b0b36c4d9970370091e11f935ee318209c9dc0534a4cba4aa4a7fb37ab9e",
+						"payLoad": {
+							"somekey": "somevalue"
+						}
+					}
+				}
+			},
+			{
+				"group": "underlyingAssetsstream",
+				"methodName": "underlyingAssets-bot2",
+				"payload": {
+					"sample": {
+						"type": "subscribe",
+						"stream": "marketData/underlyingAssets",
+						"sid": 3,
+						"apiKey": "30286a4c-0494-4280-bc96-4fb2a3368288",
+						"timestamp": "2023-08-23T11:32:14.414Z",
+						"signature": "042f84877588eeb0e5432ad23983ca4147c417468cbcc067d79fd72151fe67b7",
+						"payLoad": {
+							"somekey": "somevalue"
+						}
+					}
+				}
+			},
+			{
+				"group": "underlyingAssetsstream",
+				"methodName": "underlyingAssets-trader1",
+				"payload": {
+					"sample": {
+						"type": "subscribe",
+						"stream": "marketData/underlyingAssets",
+						"sid": 3,
+						"apiKey": "2b89f1ba-b79f-474d-9d53-4a04014e6f71",
+						"timestamp": "2023-08-23T11:33:21.781Z",
+						"signature": "8183c3c1edc4bb01fdfa56506c5d6285236fcd53276f7f10bfddb1cc64de0253",
+						"payLoad": {
+							"somekey": "somevalue"
+						}
+					}
+				}
+			},
+			{
+				"group": "underlyingAssetsstream",
+				"methodName": "underlyingAssets-trader2",
+				"payload": {
+					"sample": {
+						"type": "subscribe",
+						"stream": "marketData/underlyingAssets",
+						"sid": 3,
+						"apiKey": "3a61bc85-c233-4dde-ae8a-315111bbe17d",
+						"timestamp": "2023-08-23T11:33:57.517Z",
+						"signature": "02be5f6e003b3fe05849cc51efd413386106add6a778d0a468be7b8a4def32cf",
+						"payLoad": {
+							"somekey": "somevalue"
+						}
+					}
+				}
+			}
+		]
+	},
+	"[custom]-new-env-2": {
+		"url": "wss://webservermddev.om2.com",
+		"provider": "websocket",
+		"order": 10,
+		"methods": [
+			{
+				"group": "PositionsStream",
+				"methodName": "PositionsStream-mdbot1",
+				"payload": {
+					"sample": {
+						"type": "subscribe",
+						"stream": "positions",
+						"sid": 3,
+						"apiKey": "9b140665-4584-4e41-aada-42bfabf15edc",
+						"timestamp": "2023-08-28T13:10:38.892Z",
+						"signature": "e691b44a1202e9ec8486c5a2e1cceb6c6cbb049e8c1199e12ddd013711d01eed",
+						"payLoad": {
+							"somekey": "somevalue"
+						}
+					}
+				}
+			},
+			{
+				"group": "PositionsStream",
+				"methodName": "PositionsStream-mdbot2",
+				"payload": {
+					"sample": {
+						"type": "subscribe",
+						"stream": "positions",
+						"sid": 3,
+						"apiKey": "5c61c02e-863e-423e-a611-5ed228af1588",
+						"timestamp": "2023-08-28T13:11:22.264Z",
+						"signature": "6462e884a2ae0480f2b6763cf86356436a9f4fb95ef5ed07ce3c767abed5f6c9",
+						"payLoad": {
+							"somekey": "somevalue"
+						}
+					}
+				}
+			},
+			{
+				"group": "PositionsStream",
+				"methodName": "PositionsStream-mdtest",
+				"payload": {
+					"sample": {
+						"type": "subscribe",
+						"stream": "positions",
+						"sid": 3,
+						"apiKey": "4a3c5759-8423-4ecd-9cb5-97b0c8d2a2d6",
+						"timestamp": "2023-08-28T13:11:55.889Z",
+						"signature": "418ad6196761c2f6ec2b4ac60a8b5b58ad239540797210bcd3a89607804344f3",
+						"payLoad": {
+							"somekey": "somevalue"
+						}
+					}
+				}
+			},
+			{
+				"group": "InstrumentsStream",
+				"methodName": "InstrumentsStream-mdbot1",
+				"payload": {
+					"sample": {
+						"type": "subscribe",
+						"stream": "marketData/instruments",
+						"sid": 3,
+						"apiKey": "9b140665-4584-4e41-aada-42bfabf15edc",
+						"timestamp": "2023-08-28T13:10:38.892Z",
+						"signature": "e691b44a1202e9ec8486c5a2e1cceb6c6cbb049e8c1199e12ddd013711d01eed",
+						"payLoad": {
+							"somekey": "somevalue"
+						}
+					}
+				}
+			},
+			{
+				"group": "InstrumentsStream",
+				"methodName": "InstrumentsStream-mdbot2",
+				"payload": {
+					"sample": {
+						"type": "subscribe",
+						"stream": "marketData/instruments",
+						"sid": 3,
+						"apiKey": "5c61c02e-863e-423e-a611-5ed228af1588",
+						"timestamp": "2023-08-28T13:11:22.264Z",
+						"signature": "6462e884a2ae0480f2b6763cf86356436a9f4fb95ef5ed07ce3c767abed5f6c9",
+						"payLoad": {
+							"somekey": "somevalue"
+						}
+					}
+				}
+			},
+			{
+				"group": "InstrumentsStream",
+				"methodName": "InstrumentsStream-mdtest",
+				"payload": {
+					"sample": {
+						"type": "subscribe",
+						"stream": "marketData/instruments",
+						"sid": 3,
+						"apiKey": "4a3c5759-8423-4ecd-9cb5-97b0c8d2a2d6",
+						"timestamp": "2023-08-28T13:11:55.889Z",
+						"signature": "418ad6196761c2f6ec2b4ac60a8b5b58ad239540797210bcd3a89607804344f3",
+						"payLoad": {
+							"somekey": "somevalue"
+						}
+					}
+				}
+			},
+			{
+				"group": "underlyingAssetsstream",
+				"methodName": "underlyingAssets-mdbot1",
+				"payload": {
+					"sample": {
+						"type": "subscribe",
+						"stream": "marketData/underlyingAssets",
+						"sid": 3,
+						"apiKey": "9b140665-4584-4e41-aada-42bfabf15edc",
+						"timestamp": "2023-08-28T13:10:38.892Z",
+						"signature": "e691b44a1202e9ec8486c5a2e1cceb6c6cbb049e8c1199e12ddd013711d01eed",
+						"payLoad": {
+							"somekey": "somevalue"
+						}
+					}
+				}
+			},
+			{
+				"group": "underlyingAssetsstream",
+				"methodName": "underlyingAssets-mdbot2",
+				"payload": {
+					"sample": {
+						"type": "subscribe",
+						"stream": "marketData/underlyingAssets",
+						"sid": 3,
+						"apiKey": "5c61c02e-863e-423e-a611-5ed228af1588",
+						"timestamp": "2023-08-28T13:11:22.264Z",
+						"signature": "6462e884a2ae0480f2b6763cf86356436a9f4fb95ef5ed07ce3c767abed5f6c9",
+						"payLoad": {
+							"somekey": "somevalue"
+						}
+					}
+				}
+			},
+			{
+				"group": "underlyingAssetsstream",
+				"methodName": "underlyingAssets-mdtest",
+				"payload": {
+					"sample": {
+						"type": "subscribe",
+						"stream": "marketData/underlyingAssets",
+						"sid": 3,
+						"apiKey": "4a3c5759-8423-4ecd-9cb5-97b0c8d2a2d6",
+						"timestamp": "2023-08-28T13:11:55.889Z",
+						"signature": "418ad6196761c2f6ec2b4ac60a8b5b58ad239540797210bcd3a89607804344f3",
+						"payLoad": {
+							"somekey": "somevalue"
+						}
+					}
+				}
+			}
+		]
+	}
+}

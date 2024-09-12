@@ -1,0 +1,533 @@
+{
+	"Trading": {
+		"provider": "websocket",
+		"methods": [
+			{
+				"group": "Authentication API",
+				"methodName": "createSession_GSR",
+				"payload": {
+					"sample": {
+						"d": {
+							"apiKey": "",
+							"signature": "",
+							"timestamp": ""
+						},
+						"q": "exchange.market/createSession",
+						"sid": 1
+					},
+					"metadata": {
+						"q": {
+							"hidden": true,
+							"valueType": "text",
+							"id": "q",
+							"label": "q",
+							"type": "input",
+							"initialValue": "exchange.market/createSession",
+							"required": true
+						},
+						"secret": {
+							"id": "secret",
+							"label": "secret",
+							"type": "input",
+							"initialValue": "8eb3272ee47d572b1e1ab7382422899223b98fdb4959302157a315ab1c3af371",
+							"required": true,
+							"valueType": "text"
+						},
+						"apiKey": {
+							"id": "apiKey",
+							"label": "apiKey",
+							"type": "input",
+							"initialValue": "e6be7620-e1e5-4403-a859-52a854e3fde6",
+							"required": true,
+							"valueType": "text"
+						},
+						"signature": {
+							"id": "signature",
+							"label": "signature",
+							"hidden": true,
+							"type": "input",
+							"initialValue": "__SIGNATURE__",
+							"valueType": "text"
+						},
+						"sid": {
+							"id": "sid",
+							"label": "sid",
+							"type": "input",
+							"initialValue": 1,
+							"required": true,
+							"valueType": "number"
+						},
+						"timestamp": {
+							"id": "timestamp",
+							"label": "timestamp",
+							"type": "input",
+							"initialValue": "__TIMESTAMP__",
+							"required": true,
+							"valueType": "number"
+						}
+					},
+					"structure": {
+						"d": [
+							"apiKey",
+							"timestamp",
+							"signature"
+						],
+						"q": "q",
+						"sid": "sid"
+					}
+				}
+			},
+			{
+				"group": "Trading API",
+				"methodName": "placeOrder",
+				"payload": {
+					"sample": {
+						"d": {
+							"orderType": "Limit",
+							"side": "Buy",
+							"quantity": 0.7,
+							"price": 2374,
+							"instrument": "62098ED8E1927076",
+							"mpOrderId": 1001,
+							"timeInForce": "GTC",
+							"userId": ""
+						},
+						"q": "v1/exchange.market/placeOrder",
+						"sid": 1
+					},
+					"metadata": {
+						"expiryDate": {
+							"hidden": true,
+							"dependency": {
+								"override": {
+									"hidden": false,
+									"omitted": false,
+									"required": true
+								},
+								"operator": "oneOf",
+								"values": [
+									"GTD"
+								],
+								"fieldId": "timeInForce"
+							},
+							"valueType": "number",
+							"omitted": true,
+							"id": "expiryDate",
+							"label": "expiryDate",
+							"type": "input",
+							"initialValue": "__TIMESTAMP_SEC__",
+							"required": false
+						},
+						"q": {
+							"hidden": true,
+							"readonly": true,
+							"valueType": "text",
+							"id": "q",
+							"label": "q",
+							"type": "input",
+							"initialValue": "v1/exchange.market/placeOrder",
+							"required": true
+						},
+						"orderType": {
+							"id": "orderType",
+							"label": "orderType",
+							"data": [
+								"Market",
+								"Limit"
+							],
+							"type": "select",
+							"initialValue": "Limit",
+							"required": true
+						},
+						"side": {
+							"id": "side",
+							"label": "side",
+							"data": [
+								"Buy",
+								"Sell"
+							],
+							"type": "select",
+							"initialValue": "Buy",
+							"required": true
+						},
+						"quantity": {
+							"id": "quantity",
+							"label": "quantity",
+							"type": "input",
+							"initialValue": 0.7,
+							"required": true,
+							"valueType": "number"
+						},
+						"price": {
+							"hidden": true,
+							"dependency": {
+								"override": {
+									"hidden": false,
+									"omitted": false,
+									"required": true
+								},
+								"operator": "oneOf",
+								"values": [
+									"Limit"
+								],
+								"fieldId": "orderType"
+							},
+							"valueType": "number",
+							"omitted": true,
+							"id": "price",
+							"label": "price",
+							"type": "input",
+							"initialValue": 2734,
+							"required": false
+						},
+						"instrument": {
+							"id": "instrument",
+							"label": "instrument",
+							"data": [
+								"62098ED8E1927076",
+								"736F9A93331EE4A1",
+								"7BB5C84EFF22C0B0",
+								"95A7C46EBC2930DC",
+								"90F28EA556D652C4",
+								"95A7C46EBC2930DC"
+							],
+							"type": "select",
+							"required": true
+						},
+						"timeInForce": {
+							"id": "timeInForce",
+							"label": "timeInForce",
+							"data": [
+								"GTC",
+								"GTD",
+								"IOC",
+								"FOK"
+							],
+							"type": "select",
+							"initialValue": "GTC",
+							"required": true
+						},
+						"mprderId": {
+							"id": "mpOrderId",
+							"label": "mpOrderId",
+							"type": "input",
+							"initialValue": "__TIMESTAMP__",
+							"required": true,
+							"valueType": "number"
+						},
+						"sid": {
+							"id": "sid",
+							"label": "sid",
+							"type": "input",
+							"initialValue": 1,
+							"required": true,
+							"valueType": "number"
+						}
+					},
+					"structure": {
+						"d": [
+							"orderType",
+							"instrument",
+							"side",
+							"quantity",
+							"price",
+							"timeInForce",
+							"expiryDate",
+							"mpOrderId",
+							"userId"
+						],
+						"q": "q",
+						"sid": "sid"
+					}
+				}
+			},
+			{
+				"payload": {
+					"sample": {
+						"d": {
+							"orderId": 1,
+							"instrument": "62098ED8E1927076"
+						},
+						"q": "v1/exchange.market/cancelOrder",
+						"sid": 1
+					}
+				},
+				"methodName": "cancelOrder",
+				"group": "Trading API"
+			},
+			{
+				"payload": {
+					"sample": {
+						"d": {
+							"orderId": 1,
+							"instrument": "62098ED8E1927076",
+							"quantity": 0.5
+						},
+						"q": "v1/exchange.market/modifyOrder",
+						"sid": 1
+					}
+				},
+				"methodName": "modifyOrder",
+				"group": "Trading API"
+			},
+			{
+				"payload": {
+					"sample": {
+						"d": {},
+						"q": "v2/exchange.market/orderBookState",
+						"sid": 100
+					}
+				},
+				"methodName": "orderBookState",
+				"group": "Market Data API"
+			},
+			{
+				"payload": {
+					"sample": {
+						"d": {
+							"trackingNumber": 1152352
+						},
+						"q": "v2/exchange.market/orderBookDepth",
+						"sid": 101
+					}
+				},
+				"methodName": "orderBookDepth",
+				"group": "Market Data API"
+			},
+			{
+				"payload": {
+					"sample": {
+						"d": {},
+						"q": "v1/exchange.market/massOrderStatus",
+						"sid": 102
+					}
+				},
+				"methodName": "massOrderStatus",
+				"group": "Private Data API"
+			},
+			{
+				"payload": {
+					"sample": {
+						"d": {},
+						"q": "v1/exchange.market/executionReports",
+						"sid": 103
+					}
+				},
+				"methodName": "executionReports",
+				"group": "Private Data API"
+			}
+		],
+		"url": "wss://exchange-gateway-toms.staging.exberry-uat.io",
+		"order": 37
+	},
+	"Reporting API": {
+		"provider": "websocket",
+		"methods": [
+			{
+				"group": "Authentication API",
+				"methodName": "createSession",
+				"payload": {
+					"sample": {
+						"d": {
+							"apiKey": "",
+							"signature": "",
+							"timestamp": ""
+						},
+						"q": "exchange.market/createSession",
+						"sid": 1
+					},
+					"metadata": {
+						"q": {
+							"hidden": true,
+							"valueType": "text",
+							"id": "q",
+							"label": "q",
+							"type": "input",
+							"initialValue": "exchange.market/createSession",
+							"required": true
+						},
+						"secret": {
+							"id": "secret",
+							"label": "secret",
+							"type": "input",
+							"initialValue": "8eb3272ee47d572b1e1ab7382422899223b98fdb4959302157a315ab1c3af371",
+							"required": true,
+							"valueType": "text"
+						},
+						"apiKey": {
+							"id": "apiKey",
+							"label": "apiKey",
+							"type": "input",
+							"initialValue": "e6be7620-e1e5-4403-a859-52a854e3fde6",
+							"required": true,
+							"valueType": "text"
+						},
+						"signature": {
+							"id": "signature",
+							"label": "signature",
+							"hidden": true,
+							"type": "input",
+							"initialValue": "__SIGNATURE__",
+							"valueType": "text"
+						},
+						"sid": {
+							"id": "sid",
+							"label": "sid",
+							"type": "input",
+							"initialValue": 1,
+							"required": true,
+							"valueType": "number"
+						},
+						"timestamp": {
+							"id": "timestamp",
+							"label": "timestamp",
+							"type": "input",
+							"initialValue": "__TIMESTAMP__",
+							"required": true,
+							"valueType": "number"
+						}
+					},
+					"structure": {
+						"d": [
+							"apiKey",
+							"timestamp",
+							"signature"
+						],
+						"q": "q",
+						"sid": "sid"
+					}
+				}
+			},
+			{
+				"group": "Reporting API",
+				"methodName": "Orders",
+				"payload": {
+					"sample": {
+						"d": {
+							"dateFrom": "2021-12-15T00:00:01",
+							"dateTo": "2021-12-16T00:00:01",
+							"status": "Active"
+						},
+						"q": "v1/exchange.reporting/mp/orders",
+						"sid": 10
+					},
+					"metadata": {
+						"q": {
+							"hidden": true,
+							"valueType": "text",
+							"id": "q",
+							"label": "q",
+							"type": "input",
+							"initialValue": "v1/exchange.reporting/mp/orders",
+							"required": true
+						},
+						"secret": {
+							"id": "dateFrom",
+							"label": "dateFrom",
+							"type": "input",
+							"initialValue": "2021-12-15T00:00:01",
+							"required": true,
+							"valueType": "text"
+						},
+						"apiKey": {
+							"id": "dateTo",
+							"label": "dateTo",
+							"type": "input",
+							"initialValue": "2021-12-16T00:00:01",
+							"required": true,
+							"valueType": "text"
+						},
+						"status": {
+							"id": "status",
+							"label": "status",
+							"data": [
+								"Active",
+								"Executed",
+								"Cancelled"
+							],
+							"type": "select",
+							"initialValue": "Active",
+							"required": true
+						},
+						"sid": {
+							"id": "sid",
+							"label": "sid",
+							"type": "input",
+							"initialValue": 1,
+							"required": true,
+							"valueType": "number"
+						}
+					},
+					"structure": {
+						"d": [
+							"dateFrom",
+							"dateTo",
+							"status"
+						],
+						"q": "q",
+						"sid": "sid"
+					}
+				}
+			},
+			{
+				"group": "Reporting API",
+				"methodName": "Trades",
+				"payload": {
+					"sample": {
+						"d": {
+							"dateFrom": "2021-12-15T00:00:01",
+							"dateTo": "2021-12-16T00:00:01"
+						},
+						"q": "v1/exchange.reporting/mp/trades",
+						"sid": 10
+					},
+					"metadata": {
+						"q": {
+							"hidden": true,
+							"valueType": "text",
+							"id": "q",
+							"label": "q",
+							"type": "input",
+							"initialValue": "v1/exchange.reporting/mp/trades",
+							"required": true
+						},
+						"secret": {
+							"id": "dateFrom",
+							"label": "dateFrom",
+							"type": "input",
+							"initialValue": "2021-12-15T00:00:01",
+							"required": true,
+							"valueType": "text"
+						},
+						"apiKey": {
+							"id": "dateTo",
+							"label": "dateTo",
+							"type": "input",
+							"initialValue": "2021-12-16T00:00:01",
+							"required": true,
+							"valueType": "text"
+						},
+						"sid": {
+							"id": "sid",
+							"label": "sid",
+							"type": "input",
+							"initialValue": 1,
+							"required": true,
+							"valueType": "number"
+						}
+					},
+					"structure": {
+						"d": [
+							"dateFrom",
+							"dateTo"
+						],
+						"q": "q",
+						"sid": "sid"
+					}
+				}
+			}
+		],
+		"url": "wss://exchange-gateway-toms.staging.exberry-uat.io",
+		"order": 56
+	}
+}

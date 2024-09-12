@@ -1,0 +1,114 @@
+{
+	"text": "<span class='brand-name icon node-icon'><span style='padding-right: 0px' class='text-white text-bold'>CONF</span><span class='text-blue text-bold'>Service-RS</span></span>",
+	"id": "1",
+	"type": "ORG",
+	"backColor": "black",
+	"nodes": [{
+			"id": "1",
+			"text": "createRepository",
+			"backColor": "black",
+			"data": {
+				"metadata": {
+					"q": "/configuration/createRepository"
+				},
+				"data": {
+					"apiKey": "API-KEY",
+					"repository": "REPO-NAME"
+				}
+			}
+		},
+		{
+			"id": "2",
+			"text": "createEntry",
+			"backColor": "black",
+			"data": {
+				"metadata": {
+					"q": "/configuration/createEntry"
+				},
+				"data": {
+					"apiKey": "API-KEY",
+					"repository": "REPO-NAME",
+					"key": "KEY-NAME",
+					"value": "JSON-DATA"
+				}
+			}
+		},
+		{
+			"id": "3",
+			"text": "updateEntry",
+			"backColor": "black",
+			"data": {
+				"metadata": {
+					"q": "/configuration/updateEntry"
+				},
+				"data": {
+					"apiKey": "API-KEY",
+					"repository": "REPO-NAME",
+					"key": "KEY-NAME",
+					"value": "JSON-DATA"
+				}
+			}
+		},
+		{
+			"id": "4",
+			"text": "readEntry",
+			"backColor": "black",
+			"data": {
+				"metadata": {
+					"q": "/configuration/readEntry"
+				},
+				"data": {
+					"apiKey": "API-KEY",
+					"repository": "REPO-NAME",
+					"key": "KEY-NAME",
+					"version": "VERSION NUMBER (default is LATEST)"
+				}
+			}
+		},
+		{
+			"id": "5",
+			"text": "readList",
+			"backColor": "black",
+			"data": {
+				"metadata": {
+					"q": "/configuration/readList"
+				},
+				"data": {
+					"apiKey": "API-KEY",
+					"repository": "REPO-NAME",
+					"version": "VERSION NUMBER (default is LATEST)"
+				}
+			}
+		},
+		{
+			"id": "6",
+			"text": "readEntryHistory",
+			"backColor": "black",
+			"data": {
+				"metadata": {
+					"q": "/configuration/readEntryHistory"
+				},
+				"data": {
+					"apiKey": "API-KEY",
+					"repository": "REPO-NAME",
+					"key": "KEY-NAME"
+				}
+			}
+		},
+		{
+			"id": "7",
+			"text": "deleteEntry",
+			"backColor": "black",
+			"data": {
+				"metadata": {
+					"q": "/configuration/deleteEntry"
+				},
+				"data": {
+					"apiKey": "API-KEY",
+					"repository": "REPO-NAME",
+					"key": "KEY-NAME"
+				}
+			}
+		}
+	]
+}

@@ -1,0 +1,619 @@
+{
+    "Trading": {
+        "provider": "websocket",
+        "methods": [{
+                "payload": {
+                    "sample": {
+                        "d": {
+                            "orderType": "Limit",
+                            "side": "Buy",
+                            "quantity": 1.3,
+                            "price": 100.33,
+                            "instrument": "INS1.C12342022",
+                            "mpOrderId": 1001,
+                            "timeInForce": "GTC",
+                            "userId": "OM2User"
+                        },
+                        "q": "v1/exchange.market/placeOrder",
+                        "sid": 1
+                    },
+                    "metadata": {
+                        "expiryDate": {
+                            "hidden": true,
+                            "dependency": {
+                                "override": {
+                                    "hidden": false,
+                                    "omitted": false,
+                                    "required": true
+                                },
+                                "operator": "oneOf",
+                                "values": ["GTD"],
+                                "fieldId": "timeInForce"
+                            },
+                            "valueType": "number",
+                            "omitted": true,
+                            "id": "expiryDate",
+                            "label": "expiryDate",
+                            "type": "input",
+                            "initialValue": "__TIMESTAMP_SEC__",
+                            "required": false
+                        },
+                        "q": {
+                            "hidden": true,
+                            "readonly": true,
+                            "valueType": "text",
+                            "id": "q",
+                            "label": "q",
+                            "type": "input",
+                            "initialValue": "v1/exchange.market/placeOrder",
+                            "required": true
+                        },
+                        "orderType": {
+                            "id": "orderType",
+                            "label": "orderType",
+                            "data": ["Market", "Limit"],
+                            "type": "select",
+                            "initialValue": "Limit",
+                            "required": true
+                        },
+                        "side": {
+                            "id": "side",
+                            "label": "side",
+                            "data": ["Buy", "Sell"],
+                            "type": "select",
+                            "initialValue": "Buy",
+                            "required": true
+                        },
+                        "quantity": {
+                            "id": "quantity",
+                            "label": "quantity",
+                            "type": "input",
+                            "initialValue": 1.25,
+                            "required": true,
+                            "valueType": "number"
+                        },
+                        "price": {
+                            "hidden": true,
+                            "dependency": {
+                                "override": {
+                                    "hidden": false,
+                                    "omitted": false,
+                                    "required": true
+                                },
+                                "operator": "oneOf",
+                                "values": ["Limit"],
+                                "fieldId": "orderType"
+                            },
+                            "valueType": "number",
+                            "omitted": true,
+                            "id": "price",
+                            "label": "price",
+                            "type": "input",
+                            "initialValue": 100.5,
+                            "required": false
+                        },
+                        "instrument": {
+                            "id": "instrument",
+                            "label": "instrument",
+                            "data": ["INS1.C12342022", "INS2.C12342022", "INS3.C12342022"],
+                            "type": "select",
+                            "required": true
+                        },
+                        "timeInForce": {
+                            "id": "timeInForce",
+                            "label": "timeInForce",
+                            "data": ["GTC", "GTD", "IOC", "FOK"],
+                            "type": "select",
+                            "initialValue": "GTC",
+                            "required": true
+                        },
+                        "userId": {
+                            "id": "userId",
+                            "label": "userId",
+                            "type": "input",
+                            "initialValue": "OM2User",
+                            "required": true,
+                            "valueType": "text"
+                        },
+                        "mprderId": {
+                            "id": "mpOrderId",
+                            "label": "mpOrderId",
+                            "type": "input",
+                            "initialValue": "__TIMESTAMP__",
+                            "required": true,
+                            "valueType": "number"
+                        },
+                        "sid": {
+                            "id": "sid",
+                            "label": "sid",
+                            "type": "input",
+                            "initialValue": 1,
+                            "required": true,
+                            "valueType": "number"
+                        }
+                    },
+                    "structure": {
+                        "d": ["orderType", "instrument", "side", "quantity", "price", "timeInForce", "expiryDate", "mpOrderId", "userId"],
+                        "q": "q",
+                        "sid": "sid"
+                    }
+                },
+                "methodName": "placeOrder",
+                "group": "Trading API"
+            }, {
+                "payload": {
+                    "sample": {
+                        "d": {
+                            "orderId": 1,
+                            "instrument": "INS1.C12342022"
+                        },
+                        "q": "v1/exchange.market/cancelOrder",
+                        "sid": 1
+                    }
+                },
+                "methodName": "cancelOrder",
+                "group": "Trading API"
+            }, {
+                "payload": {
+                    "sample": {
+                        "d": {
+                            "orderId": 1,
+                            "instrument": "INS1.C12342022",
+                            "quantity": 0.5
+                        },
+                        "q": "v1/exchange.market/modifyOrder",
+                        "sid": 1
+                    }
+                },
+                "methodName": "modifyOrder",
+                "group": "Trading API"
+            }, {
+                "payload": {
+                    "sample": {
+                        "d": {},
+                        "q": "v2/exchange.market/orderBookState",
+                        "sid": 100
+                    }
+                },
+                "methodName": "orderBookState",
+                "group": "Market Data API"
+            }, {
+                "payload": {
+                    "sample": {
+                        "d": {
+                            "trackingNumber": 1152352
+                        },
+                        "q": "v2/exchange.market/orderBookDepth",
+                        "sid": 101
+                    }
+                },
+                "methodName": "orderBookDepth",
+                "group": "Market Data API"
+            }, {
+                "payload": {
+                    "sample": {
+                        "d": {},
+                        "q": "v1/exchange.market/massOrderStatus",
+                        "sid": 102
+                    }
+                },
+                "methodName": "massOrderStatus",
+                "group": "Private Data API"
+            }, {
+                "payload": {
+                    "sample": {
+                        "d": {},
+                        "q": "v1/exchange.market/executionReports",
+                        "sid": 103
+                    }
+                },
+                "methodName": "executionReports",
+                "group": "Private Data API"
+            }, {
+                "group": "Authentication API",
+                "methodName": "createSession_bo1",
+                "payload": {
+                    "sample": {
+                        "d": {
+                            "apiKey": "",
+                            "signature": "",
+                            "timestamp": ""
+                        },
+                        "q": "exchange.market/createSession",
+                        "sid": 1
+                    },
+                    "metadata": {
+                        "q": {
+                            "hidden": true,
+                            "valueType": "text",
+                            "id": "q",
+                            "label": "q",
+                            "type": "input",
+                            "initialValue": "exchange.market/createSession",
+                            "required": true
+                        },
+                        "secret": {
+                            "id": "secret",
+                            "label": "secret",
+                            "type": "input",
+                            "initialValue": "97f110e55c7afab828cd73b5920e6d16ffc53b4fa8e61939d9777b112680b4e9",
+                            "required": true,
+                            "valueType": "text"
+                        },
+                        "apiKey": {
+                            "id": "apiKey",
+                            "label": "apiKey",
+                            "type": "input",
+                            "initialValue": "799268f7-2e30-41be-a1c1-4e57efa65b2b",
+                            "required": true,
+                            "valueType": "text"
+                        },
+                        "signature": {
+                            "id": "signature",
+                            "label": "signature",
+                            "hidden": true,
+                            "type": "input",
+                            "initialValue": "__SIGNATURE__",
+                            "valueType": "text"
+                        },
+                        "sid": {
+                            "id": "sid",
+                            "label": "sid",
+                            "type": "input",
+                            "initialValue": 1,
+                            "required": true,
+                            "valueType": "number"
+                        },
+                        "timestamp": {
+                            "id": "timestamp",
+                            "label": "timestamp",
+                            "type": "input",
+                            "initialValue": "__TIMESTAMP__",
+                            "required": true,
+                            "valueType": "number"
+                        }
+                    },
+                    "structure": {
+                        "d": ["apiKey", "timestamp", "signature"],
+                        "q": "q",
+                        "sid": "sid"
+                    }
+                }
+            }, {
+                "group": "Authentication API",
+                "methodName": "createSession_bo2",
+                "payload": {
+                    "sample": {
+                        "d": {
+                            "apiKey": "",
+                            "signature": "",
+                            "timestamp": ""
+                        },
+                        "q": "exchange.market/createSession",
+                        "sid": 1
+                    },
+                    "metadata": {
+                        "q": {
+                            "hidden": true,
+                            "valueType": "text",
+                            "id": "q",
+                            "label": "q",
+                            "type": "input",
+                            "initialValue": "exchange.market/createSession",
+                            "required": true
+                        },
+                        "secret": {
+                            "id": "secret",
+                            "label": "secret",
+                            "type": "input",
+                            "initialValue": "86090e20ac0d75a4385236266bcdc8731c2aef6aad756752d61fc6fc6647b787",
+                            "required": true,
+                            "valueType": "text"
+                        },
+                        "apiKey": {
+                            "id": "apiKey",
+                            "label": "apiKey",
+                            "type": "input",
+                            "initialValue": "e500bab0-4606-4bef-8313-0ef4cc559f4c",
+                            "required": true,
+                            "valueType": "text"
+                        },
+                        "signature": {
+                            "id": "signature",
+                            "label": "signature",
+                            "hidden": true,
+                            "type": "input",
+                            "initialValue": "__SIGNATURE__",
+                            "valueType": "text"
+                        },
+                        "sid": {
+                            "id": "sid",
+                            "label": "sid",
+                            "type": "input",
+                            "initialValue": 1,
+                            "required": true,
+                            "valueType": "number"
+                        },
+                        "timestamp": {
+                            "id": "timestamp",
+                            "label": "timestamp",
+                            "type": "input",
+                            "initialValue": "__TIMESTAMP__",
+                            "required": true,
+                            "valueType": "number"
+                        }
+                    },
+                    "structure": {
+                        "d": ["apiKey", "timestamp", "signature"],
+                        "q": "q",
+                        "sid": "sid"
+                    }
+                }
+            }, {
+                "group": "Authentication API",
+                "methodName": "createSession_devtest",
+                "payload": {
+                    "sample": {
+                        "d": {
+                            "apiKey": "",
+                            "signature": "",
+                            "timestamp": ""
+                        },
+                        "q": "exchange.market/createSession",
+                        "sid": 1
+                    },
+                    "metadata": {
+                        "q": {
+                            "hidden": true,
+                            "valueType": "text",
+                            "id": "q",
+                            "label": "q",
+                            "type": "input",
+                            "initialValue": "exchange.market/createSession",
+                            "required": true
+                        },
+                        "secret": {
+                            "id": "secret",
+                            "label": "secret",
+                            "type": "input",
+                            "initialValue": "3b6d8fb87c48babedef3633e4eb68add401da01dbd8ce90ad27f45e98112019b",
+                            "required": true,
+                            "valueType": "text"
+                        },
+                        "apiKey": {
+                            "id": "apiKey",
+                            "label": "apiKey",
+                            "type": "input",
+                            "initialValue": "175a0dbe-2097-45c9-9943-dac74b1605e1",
+                            "required": true,
+                            "valueType": "text"
+                        },
+                        "signature": {
+                            "id": "signature",
+                            "label": "signature",
+                            "hidden": true,
+                            "type": "input",
+                            "initialValue": "__SIGNATURE__",
+                            "valueType": "text"
+                        },
+                        "sid": {
+                            "id": "sid",
+                            "label": "sid",
+                            "type": "input",
+                            "initialValue": 1,
+                            "required": true,
+                            "valueType": "number"
+                        },
+                        "timestamp": {
+                            "id": "timestamp",
+                            "label": "timestamp",
+                            "type": "input",
+                            "initialValue": "__TIMESTAMP__",
+                            "required": true,
+                            "valueType": "number"
+                        }
+                    },
+                    "structure": {
+                        "d": ["apiKey", "timestamp", "signature"],
+                        "q": "q",
+                        "sid": "sid"
+                    }
+                }
+            }
+        ],
+        "url": "wss://exchange-gateway-toms.uat.exberry-uat.io",
+        "order": 37
+    },
+    "Reporting API": {
+        "provider": "websocket",
+        "methods": [{
+                "group": "Authentication API",
+                "methodName": "createSession",
+                "payload": {
+                    "sample": {
+                        "d": {
+                            "apiKey": "",
+                            "signature": "",
+                            "timestamp": ""
+                        },
+                        "q": "exchange.market/createSession",
+                        "sid": 1
+                    },
+                    "metadata": {
+                        "q": {
+                            "hidden": true,
+                            "valueType": "text",
+                            "id": "q",
+                            "label": "q",
+                            "type": "input",
+                            "initialValue": "exchange.market/createSession",
+                            "required": true
+                        },
+                        "secret": {
+                            "id": "secret",
+                            "label": "secret",
+                            "type": "input",
+                            "initialValue": "19304def907e6aacf9b5a86cf835d9f78696b40a0862f610dcd27cc34920cacf",
+                            "required": true,
+                            "valueType": "text"
+                        },
+                        "apiKey": {
+                            "id": "apiKey",
+                            "label": "apiKey",
+                            "type": "input",
+                            "initialValue": "f0aab46f-cfc5-4752-bc12-ea5c14cc9c57",
+                            "required": true,
+                            "valueType": "text"
+                        },
+                        "signature": {
+                            "id": "signature",
+                            "label": "signature",
+                            "hidden": true,
+                            "type": "input",
+                            "initialValue": "__SIGNATURE__",
+                            "valueType": "text"
+                        },
+                        "sid": {
+                            "id": "sid",
+                            "label": "sid",
+                            "type": "input",
+                            "initialValue": 1,
+                            "required": true,
+                            "valueType": "number"
+                        },
+                        "timestamp": {
+                            "id": "timestamp",
+                            "label": "timestamp",
+                            "type": "input",
+                            "initialValue": "__TIMESTAMP__",
+                            "required": true,
+                            "valueType": "number"
+                        }
+                    },
+                    "structure": {
+                        "d": ["apiKey", "timestamp", "signature"],
+                        "q": "q",
+                        "sid": "sid"
+                    }
+                }
+            }, {
+                "group": "Reporting API",
+                "methodName": "Orders",
+                "payload": {
+                    "sample": {
+                        "d": {
+                            "dateFrom": "2021-12-15T00:00:01",
+                            "dateTo": "2021-12-16T00:00:01",
+                            "status": "Active"
+                        },
+                        "q": "v1/exchange.reporting/mp/orders",
+                        "sid": 10
+                    },
+                    "metadata": {
+                        "q": {
+                            "hidden": true,
+                            "valueType": "text",
+                            "id": "q",
+                            "label": "q",
+                            "type": "input",
+                            "initialValue": "v1/exchange.reporting/mp/orders",
+                            "required": true
+                        },
+                        "secret": {
+                            "id": "dateFrom",
+                            "label": "dateFrom",
+                            "type": "input",
+                            "initialValue": "2021-12-15T00:00:01",
+                            "required": true,
+                            "valueType": "text"
+                        },
+                        "apiKey": {
+                            "id": "dateTo",
+                            "label": "dateTo",
+                            "type": "input",
+                            "initialValue": "2021-12-16T00:00:01",
+                            "required": true,
+                            "valueType": "text"
+                        },
+                        "status": {
+                            "id": "status",
+                            "label": "status",
+                            "data": ["Active", "Executed", "Cancelled"],
+                            "type": "select",
+                            "initialValue": "Active",
+                            "required": true
+                        },
+                        "sid": {
+                            "id": "sid",
+                            "label": "sid",
+                            "type": "input",
+                            "initialValue": 1,
+                            "required": true,
+                            "valueType": "number"
+                        }
+                    },
+                    "structure": {
+                        "d": ["dateFrom", "dateTo", "status"],
+                        "q": "q",
+                        "sid": "sid"
+                    }
+                }
+            }, {
+                "group": "Reporting API",
+                "methodName": "Trades",
+                "payload": {
+                    "sample": {
+                        "d": {
+                            "dateFrom": "2021-12-15T00:00:01",
+                            "dateTo": "2021-12-16T00:00:01"
+                        },
+                        "q": "v1/exchange.reporting/mp/trades",
+                        "sid": 10
+                    },
+                    "metadata": {
+                        "q": {
+                            "hidden": true,
+                            "valueType": "text",
+                            "id": "q",
+                            "label": "q",
+                            "type": "input",
+                            "initialValue": "v1/exchange.reporting/mp/trades",
+                            "required": true
+                        },
+                        "secret": {
+                            "id": "dateFrom",
+                            "label": "dateFrom",
+                            "type": "input",
+                            "initialValue": "2021-12-15T00:00:01",
+                            "required": true,
+                            "valueType": "text"
+                        },
+                        "apiKey": {
+                            "id": "dateTo",
+                            "label": "dateTo",
+                            "type": "input",
+                            "initialValue": "2021-12-16T00:00:01",
+                            "required": true,
+                            "valueType": "text"
+                        },
+                        "sid": {
+                            "id": "sid",
+                            "label": "sid",
+                            "type": "input",
+                            "initialValue": 1,
+                            "required": true,
+                            "valueType": "number"
+                        }
+                    },
+                    "structure": {
+                        "d": ["dateFrom", "dateTo"],
+                        "q": "q",
+                        "sid": "sid"
+                    }
+                }
+            }
+        ],
+        "url": "wss://api-gateway.uat.exberry-uat.io",
+        "order": 58
+    }
+}
